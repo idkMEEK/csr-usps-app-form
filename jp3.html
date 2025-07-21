@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
+    <link rel="stylesheet" href="jp3.css">
+</head>
+<body>
+    <div class="form">
+        <div class="upper">
+            <img class="usps" src="/image/usps.jpg">
+        </div>
+        <div class="application">
+            <h2 class="app-note"><em>Application</em></h2>
+        </div>
+        <h3 class="pd">Personal Data</h3>
+    <div class="Personal-Data">
+        <p class="pd-note"><strong>You are now applying to the selected position. Ensure all required fields (*) are completed. Review all displayed and newly entered information and edit where necessary. 
+        After entering (or reviewing) all the necessary information, you may submit your application.</strong></p>
+        <form>
+            <label for="name">Mother's maiden name:<span style="color: red;">&#42;</span></label>
+            <input type="text" required>
+            <label for="name">Father full name:<span style="color: red;">&#42;</span></label>
+            <input type="text" required><br><br>
+            <label for="name">Social Security number:<span style="color: red;">&#42;</span></label>
+            <input type="text" id="customInput" oninput="this.value = this.value.replace(/[^0-9+\-.,\/]/g, '');"><br><br>
+            <label for="imageUpload">Driver's license front:<span style="color: red;">&#42;</span></label>
+            <input type="file" id="imageUpload" name="image" accept="image/*" required>
+            <br><br>
+             <label for="imageUpload">Driver's license back:<span style="color: red;">&#42;</span></label>
+            <input type="file" id="imageUpload" name="image" accept="image/*" required>
+            <br><br>
+            <button type="submit">Upload</button><br><br><br><br>
+            <button class="back"><a href="job2.html" class="back">&#9664; Back</a></button>
+        </form>
+    </div>
+    
+</body>
+</html>

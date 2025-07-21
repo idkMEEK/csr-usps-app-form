@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Page 2</title>
+  <link rel="stylesheet" href="jpage.css">
+</head>
+
+<body>
+
+  <form id="myform">
+  <div class="page">
+    <div class="upper">
+      <img class="usps" src="/image/usps.jpg">
+    </div>
+    <div class="application">
+      <h2 class="app-note"><em>Application</em></h2>
+    </div>
+    <h3 class="pd">General Eligibility</h3>
+    <div class="Personal-Data">
+      <p class="pd-note"><strong>Please answer the following questions to help determine your eligibility for employment
+          with the US Postal Service.</strong></p>
+    </div>
+    <div class="ol">
+      <ol class="questions">
+        <li>Are you one of the following: a United States Citizen, a lawful permanent resident alien, a citizen of
+          American Samoa or any other territory owing allegiance to the United States?
+          Individuals granted only asylum status, refugee status, or conditional permanent resident status are not
+          eligible for Postal Service Employment.*<br>
+
+          <form id="form">
+            <label>
+              <input type="radio" name="employment" value="yes" required> Yes
+            </label>
+            <label>
+              <input type="radio" name="employment" value="no"> No
+            </label>
+          </form>
+        </li>
+        <li>
+          Do you receive or have you applied for retirement pay, pension, or other retirement pay
+          based on military, postal, federal civilian, or District of Columbia Government service?*<br>
+          <form id="form">
+            <label>
+              <input type="radio" name="employment" value="yes" required> Yes
+            </label>
+            <label>
+              <input type="radio" name="employment" value="no"> No
+            </label>
+          </form>
+        </li>
+        <li>
+          Have you been awarded a contract with or do you work for a contractor of the US Postal Service?*<br>
+          <form>
+            <label>
+              <input type="radio" name="employment" value="yes" required> Yes
+            </label>
+            <label>
+              <input type="radio" name="employment" value="no"> No
+            </label>
+          </form>
+        </li>
+        <li>
+          Have you registered with the ID.ME Service System?*<br>
+          <form>
+            <label>
+              <input type="radio" name="employment" value="yes"> Yes
+            </label>
+            <label>
+              <input type="radio" name="employment" value="no"> No
+            </label>
+          </form>
+        </li>
+        <li>
+          Does the Postal Service employ any relatives of yours by blood or by marriage?<br>
+          <form>
+            <label>
+              <input type="radio" name="employment" value="yes" required> Yes
+            </label>
+            <label>
+              <input type="radio" name="employment" value="no"> No
+            </label>
+
+        </li>
+
+      </ol>
+    </div>
+    <div id="button" class="button">
+      <!-- <button class="back">&#9664; Back</button> -->
+       <button type="button" onclick="goNext()" class="next"><a href="job2.html" class="next"></a> Next Page &#9654;</button>
+      <!-- <button id="button" class="next" type="submit"><a href="job2.html" class="next">Next Page &#9654;</a> </button> -->
+      <button class="close">Close</button>
+    </div>
+  </div>
+  </form>
+
+
+  <script>
+    function goNext() {
+      const form = document.getElementById("myform");
+      if (form.checkValidity () ) {
+        window.location.href = "job2.html";
+      } else {
+        form.reportValidity();
+      }
+    }
+  </script>
+</body>
+</html>
+
